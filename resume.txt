@@ -1,0 +1,98 @@
+
+nelson rivero <nelsun1999@gmail.com>
+10:26 AM (0 minutes ago)
+to me
+
+\documentclass[a4paper,12pt]{article}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault} % Use a clean sans-serif font
+\usepackage{array}
+
+% Formatting section titles to resemble a minimalist restaurant menu
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
+
+\begin{document}
+
+\begin{center}
+    {\Huge \textbf{Nelson Rivero}} \\
+    \vspace{0.2cm}
+    \small \textbf{nelsun1999@gmail.com} \quad
+    \textbf{919-592-1040} \\
+\end{center}
+
+\vspace{0.5cm}
+
+\section*{Professional Summary}
+Adaptable IT professional with a background in troubleshooting, infrastructure management, and customer service. Experienced in process optimization, problem-solving, and user support. Strong foundation in cloud infrastructure and networking, currently expanding expertise in IT environments.
+
+\vspace{0.5cm}
+
+\section*{Professional Experience}
+
+\textbf{Lead Sterile Processing Technician} \hfill \textit{July 2024 – Present} \\
+\textit{WakeMed Surgical Center} \\
+\begin{itemize}[noitemsep,topsep=0pt]
+    \item Oversee and manage surgical instrument orders, ensuring inventory accuracy.
+    \item Maintain detailed records and compliance documentation for sterilization procedures.
+    \item Troubleshoot and resolve sterilization process errors to maintain efficiency and safety.
+\end{itemize}
+
+\textbf{Founder and Tour Guide – Raleigh Shoelace Express} \hfill \textit{2024 – Present} \\
+\begin{itemize}[noitemsep,topsep=0pt]
+    \item Designed and developed a unique historical tour route.
+    \item Building the official website with plans for full e-commerce functionality.
+    \item Managing logistics, branding, and online presence for a new city tour experience.
+\end{itemize}
+
+\textbf{Part-Time Ghost Tour Guide} \hfill \textit{June 2023 – Present} \\
+\textit{US Ghost Adventures} \\
+\begin{itemize}[noitemsep,topsep=0pt]
+    \item Lead immersive ghost tours, combining historical narratives with engaging storytelling.
+    \item Provide excellent customer service and public speaking to enhance guest experience.
+\end{itemize}
+
+\textbf{Certified Sterile Processing Technician} \hfill \textit{2020 – Present} \\
+\textit{Davis Ambulatory Surgical Center (Duke) | 2022 – Present} \\
+\begin{itemize}[noitemsep,topsep=0pt]
+    \item Troubleshoot sterilization process inefficiencies to ensure patient safety.
+    \item Collaborate with surgical teams to provide timely and precise instrument sets.
+    \item Maintain quality control in high-pressure surgical environments.
+\end{itemize}
+
+\textit{Duke Regional Hospital | 2020 – 2022} \\
+\begin{itemize}[noitemsep,topsep=0pt]
+    \item Ensured timely delivery of sterile instruments to operating rooms.
+    \item Optimized workflow efficiency through strategic instrument processing.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\section*{Technical Skills}
+\begin{tabular}{>{\bfseries}p{6cm} p{8cm}}
+Networking Basics: & Diagnosing connectivity issues, configuring routers, troubleshooting network failures. \\
+IT Support: & Experience with ticketing systems, end-user troubleshooting, and hardware/software support. \\
+Infrastructure: & Knowledge of cloud-based services, virtualization, and system administration. \\
+Web Development: & Building websites, integrating payment systems, and optimizing user experience. \\
+Customer Service: & Strong communication skills and problem-solving in technical and service roles. \\
+\end{tabular}
+
+\vspace{0.5cm}
+
+\section*{Education \& Certifications}
+\textbf{Wake Tech Community College} \hfill \textit{2024 – Present} \\
+\textit{Associate Degree in Cloud Infrastructure} \\
+
+\textbf{CompTIA A+ Certification} \hfill \textit{In Progress} \\
+
+\textbf{CSPDT (Certified Sterile Processing and Distribution Technician)} \\
+\textit{Wake Tech} – Completed a 6-month program and passed the CSPDT exam.  
+
+\vspace{0.5cm}
+
+\section*{Languages}
+\textbf{English:} Fluent \hfill \textbf{Spanish:} Fluent
+
+\end{document}
