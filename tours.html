@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Website</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        nav { background: #333; padding: 1em; text-align: center; }
+        nav button { background: none; border: none; color: white; margin: 0 15px; text-decoration: none; cursor: pointer; font-size: 1em; }
+        nav button.active { text-decoration: underline; }
+        section { padding: 50px; text-align: center; }
+        .hidden { display: none; }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll("section").forEach(sec => sec.classList.add("hidden"));
+            document.getElementById(sectionId).classList.remove("hidden");
+            
+            document.querySelectorAll("nav button").forEach(btn => btn.classList.remove("active"));
+            document.querySelector(`nav button[data-section='${sectionId}']`).classList.add("active");
+        }
+    </script>
+</head>
+<body>
+    <nav>
+        <button data-section="home" onclick="showSection('home')" class="active">Home</button>
+        <button data-section="scheduling" onclick="showSection('scheduling')">Scheduling</button>
+        <button data-section="about" onclick="showSection('about')">About</button>
+        <button data-section="waiver" onclick="showSection('waiver')">Waiver</button>
+        <button data-section="private-tours" onclick="showSection('private-tours')">Private Tours</button>
+        <button data-section="faq" onclick="showSection('faq')">FAQ</button>
+    </nav>
+    
+    <section id="home">
+        <h1>Welcome to Our Website</h1>
+        <p>This is the home section.</p>
+    </section>
+    
+    <section id="scheduling" class="hidden">
+        <h1>Scheduling</h1>
+        <p>Information about scheduling.</p>
+    </section>
+    
+    <section id="about" class="hidden">
+        <h1>About Us</h1>
+        <p>Details about our organization.</p>
+    </section>
+    
+    <section id="waiver" class="hidden">
+        <h1>Waiver</h1>
+        <p>Legal waiver information.</p>
+    </section>
+    
+    <section id="private-tours" class="hidden">
+        <h1>Private Tours</h1>
+        <p>Details about private tours.</p>
+    </section>
+    
+    <section id="faq" class="hidden">
+        <h1>FAQ</h1>
+        <p>Frequently Asked Questions.</p>
+    </section>
+</body>
+</html>
