@@ -25,6 +25,29 @@
             document.querySelectorAll("nav button").forEach(btn => btn.classList.remove("active"));
             document.querySelector(`nav button[data-section='${sectionId}']`).classList.add("active");
         }
+
+        function enableBooking() {
+            let checkbox = document.getElementById("waiver-checkbox");
+            let bookingBox = document.getElementById("booking-box");
+            if (checkbox.checked) {
+                bookingBox.style.display = "block"; // Show booking
+            } else {
+                bookingBox.style.display = "none"; // Hide booking if unchecked
+            }
+        }
+
+        function trackWaiverClick() {
+            localStorage.setItem("waiverRead", "true");
+        }
+
+        function checkWaiverStatus() {
+            let waiverRead = localStorage.getItem("waiverRead");
+            if (waiverRead === "true") {
+                document.getElementById("waiver-checkbox").disabled = false;
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", checkWaiverStatus);
     </script>
 </head>
 <body>
@@ -46,10 +69,18 @@
         <h1>Booking</h1>
         <div class="booking-container">
             <div class="booking-box">
-                <p>Information about booking</p>
+                <p><strong>Before booking, you must read and agree to our waiver:</strong></p>
+                <p><a href="https://drive.google.com/file/d/1rHDO1d9NjPMAOYVuxjP4VqRl_KknFUee/view?usp=sharing" target="_blank" onclick="trackWaiverClick()">Read the Liability Waiver</a></p>
+                <label>
+                    <input type="checkbox" id="waiver-checkbox" disabled onchange="enableBooking()"> 
+                    I have read and agree to the terms of the Liability Waiver.
+                </label>
             </div>
-            <div class="booking-box">
-                <p><!-- Start Square Appointments Embed Code --><script src='https://square.site/appointments/buyer/widget/xr8d8n3uk5nxff/L8TZSVQHZT3YQ.js'></script><!-- End Square Appointments Embed Code --></p>
+            <div id="booking-box" class="booking-box hidden">
+                <p><!-- Start Square Appointments Embed Code -->
+                    <script src='https://square.site/appointments/buyer/widget/xr8d8n3uk5nxff/L8TZSVQHZT3YQ.js'></script>
+                    <!-- End Square Appointments Embed Code -->
+                </p>
             </div>
         </div>
     </section>
@@ -58,7 +89,7 @@
         <h1>About Us</h1>
         <p>Hour long walking tour covering multiple homes in the northeast part of downtown Raleigh, NC.<br> Meet at the North Carolina State Capital Building at 1 E Morgan St.<br>
         Meet on the side with the statue dedicated to North Carolinian presidents.<br>
-        Tour starts at 7:15. plan to arrive 15-30 mins early. Tour ends very close to the meeting point.</p>
+        Tour starts at 7:15. Plan to arrive 15-30 mins early. Tour ends very close to the meeting point.</p>
     </section>
     
     <section id="waiver" class="hidden">
@@ -69,11 +100,9 @@
     <section id="private-tours" class="hidden">
         <h1>Private Tours</h1>
         <h2>How to Book a Private Tour</h2>
-        <p>Details about the booking process.</p>
+        <p>Text 919-592-1040 or Email RaleighShoelaceExpress@gmail.com to set up a private tour </p>
         <h2>Pricing and Availability</h2>
-        <p>Information on tour pricing and schedule.</p>
-        <h2>Special Requests</h2>
-        <p>How to customize your private tour experience.</p>
+        <p>Private tours require a minimum of 10 people and are priced at 150$ (15$ a person) and 10$ for each person extra.</p>
     </section>
     
     <section id="faq" class="hidden">
@@ -85,11 +114,11 @@
         <h2>Is the tour suitable for children?</h2>
         <p>Yes! We welcome families and children of all ages.</p>
         <h2>Are pets allowed?</h2>
-        <p>Yes, well-behaved pets on leashes are welcome.</p>
+        <p>No, Pets are not allowed. We do however allow service animals.</p>
         <h2>What happens if it rains?</h2>
-        <p>We operate rain or shine, so please dress accordingly.</p>
+        <p>We operate rain or shine, so please dress accordingly. Tours will be cancelled if weather is too dangerous</p>
         <h2>Do I need to book in advance?</h2>
-        <p>Yes, we recommend booking in advance to secure your spot.</p>
+        <p>Yes. We do not do last minute bookings.</p>
     </section>
 </body>
 </html>
