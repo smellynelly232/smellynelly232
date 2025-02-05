@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Static Website</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-        nav { background: #333; padding: 1em; text-align: center; }
-        nav button { background: none; border: none; color: white; margin: 0 15px; text-decoration: none; cursor: pointer; font-size: 1em; }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #F5E6C8; }
+        nav { background: #990000; padding: 1em; text-align: center; }
+        nav button { background: none; border: none; color: white; margin: 0 15px; text-decoration: none; cursor: pointer; font-size: 1.2em; font-weight: bold; }
         nav button.active { text-decoration: underline; }
         section { padding: 50px; text-align: center; }
         .hidden { display: none; }
+        h1 { color: #990000; }
+        p { color: #000000; font-size: 1.1em; }
+        section { background: #FAF3E0; margin: 20px auto; width: 80%; border-radius: 10px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); }
+        .booking-container { display: flex; flex-direction: column; align-items: center; }
+        .booking-box { background: white; padding: 20px; margin-top: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); width: 60%; }
     </style>
     <script>
         function showSection(sectionId) {
@@ -25,26 +30,35 @@
 <body>
     <nav>
         <button data-section="home" onclick="showSection('home')" class="active">Home</button>
-        <button data-section="scheduling" onclick="showSection('scheduling')">Scheduling</button>
+        <button data-section="booking" onclick="showSection('booking')">Booking</button>
         <button data-section="about" onclick="showSection('about')">About</button>
         <button data-section="waiver" onclick="showSection('waiver')">Waiver</button>
         <button data-section="private-tours" onclick="showSection('private-tours')">Private Tours</button>
         <button data-section="faq" onclick="showSection('faq')">FAQ</button>
-    </nav>
+    </nav> 
     
     <section id="home">
-        <h1>Welcome to Our Website</h1>
-        <p>This is the home section.</p>
+        <h1>The Raleigh Shoelace Express</h1>
+        <p>A Guided Walking Tour of Downtown Raleigh</p>
     </section>
     
-    <section id="scheduling" class="hidden">
-        <h1>Scheduling</h1>
-        <p>Information about scheduling.</p>
+    <section id="booking" class="hidden">
+        <h1>Booking</h1>
+        <div class="booking-container">
+            <div class="booking-box">
+                <p>Information about booking</p>
+            </div>
+            <div class="booking-box">
+                <p><!-- Start Square Appointments Embed Code --><script src='https://square.site/appointments/buyer/widget/xr8d8n3uk5nxff/L8TZSVQHZT3YQ.js'></script><!-- End Square Appointments Embed Code --></p>
+            </div>
+        </div>
     </section>
     
     <section id="about" class="hidden">
         <h1>About Us</h1>
-        <p>Details about our organization.</p>
+        <p>Hour long walking tour covering multiple homes in the northeast part of downtown Raleigh, NC.<br> Meet at the North Carolina State Capital Building at 1 E Morgan St.<br>
+        Meet on the side with the statue dedicated to North Carolinian presidents.<br>
+        Tour starts at 7:15. plan to arrive 15-30 mins early. Tour ends very close to the meeting point.</p>
     </section>
     
     <section id="waiver" class="hidden">
@@ -54,12 +68,29 @@
     
     <section id="private-tours" class="hidden">
         <h1>Private Tours</h1>
-        <p>Details about private tours.</p>
+        <h2>How to Book a Private Tour</h2>
+        <p>Details about the booking process.</p>
+        <h2>Pricing and Availability</h2>
+        <p>Information on tour pricing and schedule.</p>
+        <h2>Special Requests</h2>
+        <p>How to customize your private tour experience.</p>
     </section>
     
     <section id="faq" class="hidden">
         <h1>FAQ</h1>
-        <p>Frequently Asked Questions.</p>
+        <h2>What should I bring on the tour?</h2>
+        <p>Comfortable walking shoes, water, and weather-appropriate clothing.</p>
+        <h2>How long does the tour last?</h2>
+        <p>Our walking tours typically last between 1.5 to 2 hours.</p>
+        <h2>Is the tour suitable for children?</h2>
+        <p>Yes! We welcome families and children of all ages.</p>
+        <h2>Are pets allowed?</h2>
+        <p>Yes, well-behaved pets on leashes are welcome.</p>
+        <h2>What happens if it rains?</h2>
+        <p>We operate rain or shine, so please dress accordingly.</p>
+        <h2>Do I need to book in advance?</h2>
+        <p>Yes, we recommend booking in advance to secure your spot.</p>
     </section>
 </body>
 </html>
+
