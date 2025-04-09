@@ -4,7 +4,7 @@
 - 💞️ I’m looking to collaborate on anything i can get my hands on. I learn best by doing.
 - 📫 My email is nelsun1999@gmail.com.   
 - 😄 Pronouns: .He/Him
-- ⚡ Fun fact: I love to play chess and play in a band. self taught amateur mycologist and animal lover.
+- ⚡ Fun fact: I love to play chess and play in a band.
 
 <!---
 smellynelly232/smellynelly232 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
